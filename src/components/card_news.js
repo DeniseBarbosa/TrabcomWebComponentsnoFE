@@ -16,8 +16,13 @@ class Cardnews extends HTMLElement{
         cardEsquerdo.setAttribute("class", "card__esquerdo");
 
         const autor = document.createElement("span");
+        autor.textContent = "By " + (this.getAttribute("autor") || "Anonimos");
+
         const linkTitulo = document.createElement("a");
+        linkTitulo.textContent = this.getAttribute("titulo");
+
         const novoConteudo = document.createElement("p");
+        novoConteudo.textContent = this.getAttribute("conteudo");
 
         cardEsquerdo.appendChild(autor);
         cardEsquerdo.appendChild(linkTitulo);
